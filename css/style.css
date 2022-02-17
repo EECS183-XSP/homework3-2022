@@ -71,9 +71,13 @@ footer a:visited{
 /*****  End Starter Code ****/
 
 /* Requirement 1 code here*/
-
+nav a {
+  text-decoration: none;
+}
 /* Requirement 2 code here*/
-
+nav a:hover{
+  text-decoration: wavy underline;
+}
 
 
 a.skip{
@@ -83,27 +87,56 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
+  left:-500px;
+  position:absolute;
   
 }
 
 
 /* Requirement 4 code here*/
-
+nav a:focus{
+  border-top: 2px solid yellow;
+}
 
 .container{
   /* Requirement 5 code here*/
-
-}
+  display: grid;
+  grid-column: 1fr 5fr 1fr;
+  row-gap: 30px;
 
 /* Requirements 6-10 here: */
+  background-image: url(../images/header.jpg);
+  background-color: #707070;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  min-height: 400px;
+} 
 
+.about, .clients, .method,.contact {
+  grid-column: 2; 
+  align-self: center;
+}
 
+.about-image, .clients-image, .method-image, .contact-image{
+  grid-column: 1/span 3;
+  overflow: hidden;
+  max-height: 500px;
+}
+img{
+  width: 100% 
+}
+.text{
+  text-align: center;
+  max-height: 25vh;
+  overflow: scroll;
+}
 
 @media screen and (min-width: 700px){
   nav{
     padding-top: 35px;
     /*Requirement 11*/
-
+    align-items:right;
   }
 
   nav li{
@@ -113,6 +146,24 @@ a.skip{
 
   
   /* Requirements 12-15 here: */
+  a.skip:focus{
+    top: 20px;
+    left: 0px; 
+    border-top: 2px solid yellow;
+  }
+
+  .container{
+    display: grid; 
+    grid-template-columns: 50px, auto, 500px, auto, 50px;
+    grid-template-rows:  300px, 300px, 300px, 300px;
+  }
+
+  .about, .method, .clients-image, .contact-image{ 
+    grid-column: 3 / span 2 
+  }
+
+  .clients, .contact, .about-image,.method-image{
+    grid-column: 2 / span 2;
 
 }
 
