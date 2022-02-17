@@ -112,9 +112,9 @@ nav a:focus{
   background-attachment:fixed;
   background-repeat:no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 400px;
 } 
-
 .about, .clients, .method,.contact {
   grid-column: 2; 
   align-self: center;
@@ -125,9 +125,27 @@ nav a:focus{
   overflow: hidden;
   max-height: 500px;
 }
-img{
-  width: 100% 
+
+.about,.about-image{
+  grid-row:1;
 }
+
+.clients,.clients-image{
+  grid-row:2;
+}
+
+.method, .method-image{
+  grid-row:3;
+}
+
+.contact, .contact-image{
+  grid-row:4;
+}
+
+.img{
+  width: 100%;
+}
+
 .text{
   text-align: center;
   max-height: 25vh;
@@ -168,7 +186,7 @@ img{
     grid-column: 2 / span 2;
 
 }
-
+}
 
 
 
@@ -194,4 +212,5 @@ img{
   .intro{
     background-attachment: initial;
   }
+
 }
