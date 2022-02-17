@@ -103,9 +103,11 @@ nav a:focus{
   display: grid;
   grid-column: 1fr 5fr 1fr;
   row-gap: 30px;
+}
 
 /* Requirements 6-10 here: */
-  background-image: url(../images/header.jpg);
+.intro{
+  background-image: url("../images/header.jpg");
   background-color: #707070;
   background-attachment:fixed;
   background-repeat:no-repeat;
